@@ -104,8 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
             <div class="p-3">
-            <h5>Title</h5>
-            <p>Sidebar content</p>
+            <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
             </div>
         </aside>
         <!-- /.control-sidebar -->

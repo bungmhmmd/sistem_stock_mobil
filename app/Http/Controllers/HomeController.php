@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        //$terbanyak_hariini = DataMobil::select(['data_mobil.nama','data_mobil.id',DB::raw('COUNT(DISTINCT data_penjualan.id) AS total')])
+        //$terbanyak_hariini = DataMobil::select(['data_mobil.nama','data_mobil.id',DB::raw('COUNT(DISTINCT data_penjualan.id_data_mobil) AS total')])
         //            ->leftJoin('data_penjualan','data_penjualan.id_data_mobil','=','data_mobil.id')
         //            ->groupBy('data_mobil.id')
         //            ->orderBy('total','desc')
