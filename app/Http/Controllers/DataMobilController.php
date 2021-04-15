@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataMobil;
+use App\Models\DataPenjualan;
 
 class DataMobilController extends Controller
 {
@@ -37,6 +38,7 @@ class DataMobilController extends Controller
     public function hapus($id)
     {
         DataMobil::destroy($id);
+        DataPenjualan::where('id_data_mobil', $id)->delete();
         return redirect()->route('data-mobil')->with(['danger' => 'Data Mobil Dihapus']);;
     }
 
